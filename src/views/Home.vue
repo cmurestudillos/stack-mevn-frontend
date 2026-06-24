@@ -1,5 +1,6 @@
 <template>
-  <ListaUsuarios class="container mx-auto margin-b text-center" />
+  <h1 class="page-title">Usuarios</h1>
+  <ListaUsuarios />
 </template>
 
 <script>
@@ -10,13 +11,12 @@ export default {
   components: {
     ListaUsuarios,
   },
-  computed: {},
-  methods: {},
 };
 </script>
 
-<style>
-.margin-b {
-  margin-bottom: 5rem;
+<style scoped>
+.page-title {
+  margin: 0 0 1.5rem;
+  font-weight: 600;
 }
 </style>

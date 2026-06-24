@@ -7,6 +7,6 @@
 CRUD MEVN stack usando la api \"https://randomuser.me/\"
 
 ## Para ejecutar esta aplicación:
-* Hay que tener instalado [npm](https://www.npmjs.com) y [node](https://nodejs.org/es/)
-* Siatuarse en el directorio ´client´ del proyecto e instalar las dependencias: `npm install`
-* Ejecutar el siguiente comando para arrancar la aplicación: `npm run serve`
+* Hay que tener instalado [pnpm](https://pnpm.io) y [node](https://nodejs.org/es/)
+* Situarse en el directorio raíz del proyecto e instalar las dependencias: `pnpm install`
+* Ejecutar el siguiente comando para arrancar la aplicación: `pnpm dev`
