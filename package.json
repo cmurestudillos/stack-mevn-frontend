@@ -1,34 +1,42 @@
 {
   "name": "mevn-stack-frontend",
-  "version": "1.0.6",
+  "version": "2.0.0",
   "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.9.0",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "format": "prettier --check ."
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "bootstrap": "^5.1.0",
-    "bootstrap-vue": "^2.21.2",
-    "core-js": "^3.6.5",
-    "register-service-worker": "^1.7.1",
-    "sweetalert2": "^11.3.0",
-    "vue": "^2.6.11",
-    "vue-axios": "^3.2.5",
-    "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
+    "@primeuix/themes": "^2.0.3",
+    "axios": "^1.18.1",
+    "primeflex": "^4.0.0",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.5.5",
+    "vue": "^3.5.38",
+    "vue-router": "^5.1.0",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-pwa": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "eslint": "^9.32.0",
+    "@eslint/js": "^10.0.1",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "@vue/test-utils": "^2.4.6",
+    "eslint": "^10.5.0",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-jsdoc": "^52.0.1",
-    "eslint-plugin-prettier": "^5.5.3",
-    "prettier": "^3.6.2",
-    "vue-template-compiler": "^2.6.11"
+    "eslint-plugin-prettier": "^5.5.6",
+    "eslint-plugin-vue": "^10.9.2",
+    "globals": "^17.7.0",
+    "jsdom": "^29.1.1",
+    "prettier": "^3.8.4",
+    "vite": "^8.1.0",
+    "vitest": "^4.1.9"
   }
 }

@@ -1,26 +1,28 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
+import PrimeVue from 'primevue/config';
+import ToastService from 'primevue/toastservice';
+import ConfirmationService from 'primevue/confirmationservice';
 import App from './App.vue';
-import './registerServiceWorker';
 import router from './router';
 import store from './store';
+import { AppPreset } from './theme/app-preset';
 
-//Bootstrap-Vue
-import BootstrapVue from 'bootstrap-vue';
-Vue.use(BootstrapVue);
-// Boostrap - CSS
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
-// Peticiones para el BackEnd
-import axios from 'axios';
-import VueAxios from 'vue-axios';
-Vue.use(VueAxios, axios);
-// Agregamos la URL base de nuestra API
-axios.defaults.baseURL = process.env.VUE_APP_BACKEND_URL;
+import 'primeicons/primeicons.css';
+import 'primeflex/primeflex.css';
 
-Vue.config.productionTip = false;
+const app = createApp(App);
 
-new Vue({
-  router,
-  store,
-  render: h => h(App),
-}).$mount('#app');
+app.use(router);
+app.use(store);
+app.use(PrimeVue, {
+  theme: {
+    preset: AppPreset,
+    options: {
+      darkModeSelector: '.app-dark',
+    },
+  },
+});
+app.use(ToastService);
+app.use(ConfirmationService);
+
+app.mount('#app');
